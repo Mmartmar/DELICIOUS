@@ -1,0 +1,154 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para la sección hero (encabezado principal) */
+.hero {
+    background: url('../images/hero-image.jpg') center/cover no-repeat; /* Imagen de fondo */
+    height: 50vh; /* Altura de la sección */
+    position: relative;
+    display: flex;
+    align-items: center; /* Centrar contenido verticalmente */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    text-align: center;
+    color: white; /* Texto en blanco */
+}
+
+.hero::before {
+    content: ""; /* Capa de superposición */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.hero-content {
+    position: relative; /* Asegura que el contenido esté encima de la capa de superposición */
+    z-index: 1;
+}
+
+/* Estilos para la sección de experiencia */
+.experiencia-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaciado entre elementos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+}
+
+.experiencia-container img {
+    width: 50%; /* Ancho de las imágenes */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Título de la sección "Antójate" */
+.antojate-title {
+    margin-top: 80px;
+    text-align: left;
+}
+
+/* Estilos para el encabezado de administración */
+.admin-header {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    padding: 15px;
+    text-align: center;
+    border-bottom: 5px solid #ddd; /* Línea inferior */
+    font-size: 16px;
+    font-weight: bold;
+    color: #6c757d; /* Color gris */
+    border-radius: 10px 10px 0 0; /* Bordes redondeados en la parte superior */
+}
+
+.admin-header span {
+    font-size: 25px; /* Tamaño del texto */
+    color: #6c757d;
+}
+
+.admin-header p {
+    font-size: 25px;
+    color: #6c757d;
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    width: 400px; /* Ancho de la barra lateral */
+    min-height: 100vh; /* Altura mínima igual a la ventana */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), 
+                url('../images/hero-image.jpg'); /* Fondo con degradado e imagen */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.sidebar h3 {
+    font-size: 40px; /* Tamaño del texto */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sidebar p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Línea divisoria semitransparente */
+}
+
+/* Estilos para los enlaces de la barra lateral */
+.sidebar .nav-link {
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    color: black; /* Texto negro */
+    border-radius: 8px; /* Bordes redondeados */
+    margin: 10px 0; /* Espaciado vertical */
+    padding: 30px; /* Espaciado interno */
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background 0.3s ease, color 0.3s ease; /* Transición suave al pasar el cursor */
+}
+
+.sidebar .nav-link:hover {
+    background: #ff9800; /* Fondo naranja al pasar el cursor */
+    color: white; /* Texto blanco al pasar el cursor */
+}
+
+/* Estilos para los elementos del menú */
+.menu-item {
+    display: flex; /* Elementos en línea */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: space-between; /* Espaciado entre elementos */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.menu-item img {
+    width: 170px; /* Ancho de las imágenes */
+    height: 170px; /* Altura de las imágenes */
+    object-fit: cover; /* Ajustar imagen sin deformarla */
+    border-radius: 50%; /* Forma circular */
+    margin-left: 15px; /* Espaciado izquierdo */
+}
+
+/* Contenedor de la sección del menú */
+.menu-section {
+    max-width: 800px; /* Ancho máximo */
+    margin: auto; /* Centrar horizontalmente */
+}
+
+.menu-section h4 {
+    font-size: 30px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.menu-item p {
+    font-size: 25px; /* Tamaño del texto */
+    text-align: left; /* Alineación a la izquierda */
+    margin-bottom: 20px; /* Espaciado inferior */
+}

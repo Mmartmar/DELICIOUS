@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración pedidos</title>
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- Contenedor principal -->
+    <div class="d-flex">
+
+        <!-- Barra lateral -->
+        <div class="sidebar d-flex flex-column p-3">
+            <!-- Título y descripción -->
+            <a href="../index.html" class="text-decoration-none">
+                <h3 class="text-center text-white fw-bold">DELICIOUS</h3>
+            </a>
+            <p class="text-center text-white">Los mejores sabores para tu paladar</p>
+            <hr>
+
+            <!-- Opciones de navegación -->
+            <h4 class="text-center text-white fw-bold">REPORTES</h4>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="gestion_menu.html" class="nav-link fw-bold">Gestión del Menú</a></li>
+                <li class="nav-item"><a href="admin_pedidos.html" class="nav-link">Administración de Pedidos</a></li>
+                <li class="nav-item"><a href="menu.html" class="nav-link">Menú</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Configuración</a></li>
+            </ul>
+        </div>
+
+        <!-- Contenido principal -->
+        <div class="container-fluid">
+            <!-- Encabezado de la página -->
+            <div class="admin-header d-flex justify-content-between align-items-center p-3 text-white">
+                <span class="fw-bold">GESTIÓN MENÚ</span>
+                <div class="text-end">
+                    <p class="mb-0 fw-bold">Administrador Delicious</p>
+                    <p class="mb-0 text-muted">admin@delicious.com</p>
+                </div>
+            </div>
+
+            <!-- Sección de administración -->
+            <div class="container py-4">
+                <h2 class="text-center fw-bold mb-4">Gestión del Menú</h2>
+                
+                <!-- Galería de platillos -->
+                <h4 class="mb-3">Platillos</h4>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-md-4 text-center">
+                        <img src="../images/coctel.jpg" class="img-fluid rounded shadow" alt="Coctel de ceviche" style="max-height: 200px; object-fit: cover;">
+                        <p class="mt-2">Coctel de ceviche</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="../images/tacos.jpg" class="img-fluid rounded shadow" alt="Tacos de birria" style="max-height: 200px; object-fit: cover;">
+                        <p class="mt-2">Tacos de birria</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="../images/brownie.jpg" class="img-fluid rounded shadow" alt="Brownie frutos rojos" style="max-height: 200px; object-fit: cover;">
+                        <p class="mt-2">Brownie frutos rojos</p>
+                    </div>
+                </div>
+
+                <!-- Formulario para gestionar platillos -->
+                <h4 class="mt-5">Gestionar Platillos</h4>
+                <form id="form-platillo" class="row g-3 mb-4">
+                    <div class="col-md-3">
+                        <label for="nombre" class="form-label">Nombre del platillo</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="descripcion" class="form-label">Descripción</label>
+                        <input type="text" class="form-control" id="descripcion" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="precio" class="form-label">Precio</label>
+                        <input type="number" class="form-control" id="precio" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="imagen" class="form-label">URL Imagen</label>
+                        <input type="text" class="form-control" id="imagen" required>
+                    </div>
+                    <div class="col-12 text-center mt-3">
+                        <button type="submit" class="btn btn-success me-2">Agregar</button>
+                        <button type="button" id="btn-modificar" class="btn btn-primary me-2" disabled>Modificar</button>
+                        <button type="button" id="btn-cancelar" class="btn btn-secondary" disabled>Cancelar</button>
+                    </div>
+                </form>
+
+                <!-- Tabla del menú actual -->
+                <h4 class="text-center">MENÚ ACTUAL</h4>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabla-platillos">
+                            <tr><td>Coctel de ceviche</td><td>Receta peruana con pescado fresco</td><td>$35.000</td></tr>
+                            <tr><td>Tacos de birria</td><td>Carne suave en su caldo de birria</td><td>$30.000</td></tr>
+                            <tr><td>Brownie frutos rojos</td><td>Brownie con topping de frutos rojos</td><td>$10.000</td></tr>
+                            <tr><td>Omelette de Vegetales</td><td>Huevos batidos con pimientos, champiñones y cebolla. Acompañado de pan integral.</td><td>$15.000</td></tr>
+                            <tr><td>Pancakes con Miel</td><td>Tres pancakes esponjosos con miel de maple y frutos rojos.</td><td>$18.000</td></tr>
+                            <tr><td>Tostadas Francesas</td><td>Pan brioche con canela, azúcar y sirope de fresa.</td><td>$17.000</td></tr>
+                            <tr><td>Arepa con Queso</td><td>Arepa de maíz rellena con queso derretido.</td><td>$10.000</td></tr>
+                            <tr><td>Cereal con Yogur y Frutas</td><td>Yogur natural y trozos de frutas frescas.</td><td>$12.000</td></tr>
+                            <tr><td>Desayuno Americano</td><td>Huevos al gusto, tocineta, tostadas y café o jugo natural.</td><td>$20.000</td></tr>
+                            <tr><td>Ensalada Griega</td><td>Tomate, pepino, aceitunas, cebolla morada y queso feta con aderezo de aceite de oliva.</td><td>$22.000</td></tr>
+                            <tr><td>Souvlaki de Pollo</td><td>Brochetas de pollo marinadas en especias mediterráneas, servidas con arroz y ensalada.</td><td>$30.000</td></tr>
+                            <tr><td>Hummus con Pan Pita</td><td>Crema de garbanzos con aceite de oliva y especias, acompañado de pan pita.</td><td>$18.000</td></tr>
+                            <tr><td>Pescado a la Plancha</td><td>Filete de pescado con costra de hierbas, servido con puré de papa y espárragos.</td><td>$35.000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Categorías de comida -->
+                <div class="mt-5">
+                    <h3 class="text-center fw-bold">Comida Colombiana</h3>
+                    <div class="text-center mt-3">
+                        <img src="../images/bandeja paisa.jpg" class="img-fluid rounded shadow" alt="Bandeja Paisa" style="max-width: 400px;">
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <h3 class="text-center fw-bold">Comida Peruana</h3>
+                    <div class="text-center mt-3">
+                        <img src="../images/coctel.jpg" class="img-fluid rounded shadow" alt="Coctel" style="max-width: 400px;">
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <h3 class="text-center fw-bold">Comida Mexicana</h3>
+                    <div class="text-center mt-3">
+                        <img src="../images/tacos.jpg" class="img-fluid rounded shadow" alt="Tacos" style="max-width: 600px;">
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div> 
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 Delicious Restaurante | Contacto: info@delicious.com | Tel: +123 456 7890</p>
+        <p>Sedes: CC Fabricato | CC Florida | CC Viva Envigado</p>
+    </footer>
+
+    <!-- Script de funcionalidad -->
+    <script>
+        const form = document.getElementById('form-platillo');
+        const tabla = document.getElementById('tabla-platillos');
+        const btnModificar = document.getElementById('btn-modificar');
+        const btnCancelar = document.getElementById('btn-cancelar');
+
+        let filaSeleccionada = null;
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById('nombre').value;
+            const descripcion = document.getElementById('descripcion').value;
+            const precio = document.getElementById('precio').value;
+            const imagen = document.getElementById('imagen').value;
+
+            if (filaSeleccionada) {
+                filaSeleccionada.innerHTML = crearFilaHTML(imagen, nombre, descripcion, precio);
+                filaSeleccionada = null;
+                btnModificar.disabled = true;
+                btnCancelar.disabled = true;
+            } else {
+                const fila = document.createElement('tr');
+                fila.innerHTML = crearFilaHTML(imagen, nombre, descripcion, precio);
+                tabla.appendChild(fila);
+            }
+
+            form.reset();
+        });
+
+        btnModificar.addEventListener('click', () => {
+            if (filaSeleccionada) {
+                form.dispatchEvent(new Event('submit'));
+            }
+        });
+
+        btnCancelar.addEventListener('click', () => {
+            filaSeleccionada = null;
+            form.reset();
+            btnModificar.disabled = true;
+            btnCancelar.disabled = true;
+        });
+
+        function crearFilaHTML(imagen, nombre, descripcion, precio) {
+            return `
+                <td><img src="${imagen}" width="60" height="60" style="object-fit:cover; border-radius:10px;"></td>
+                <td>${nombre}</td>
+                <td>${descripcion}</td>
+                <td>$${precio}</td>
+                <td>
+                    <button class="btn btn-warning btn-sm me-1" onclick="editarPlatillo(this)">Editar</button>
+                    <button class="btn btn-danger btn-sm" onclick="eliminarPlatillo(this)">Eliminar</button>
+                </td>
+            `;
+        }
+
+        function editarPlatillo(boton) {
+            filaSeleccionada = boton.closest('tr');
+            const celdas = filaSeleccionada.children;
+
+            document.getElementById('imagen').value = celdas[0].querySelector('img').src;
+            document.getElementById('nombre').value = celdas[1].textContent;
+            document.getElementById('descripcion').value = celdas[2].textContent;
+            document.getElementById('precio').value = celdas[3].textContent.replace('$', '');
+
+            btnModificar.disabled = false;
+            btnCancelar.disabled = false;
+        }
+
+        function eliminarPlatillo(boton) {
+            const fila = boton.closest('tr');
+            fila.remove();
+            form.reset();
+            btnModificar.disabled = true;
+            btnCancelar.disabled = true;
+            filaSeleccionada = null;
+        }
+    </script>
+</body>
+</html>
