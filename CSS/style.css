@@ -152,3 +152,40 @@
     text-align: left; /* Alineación a la izquierda */
     margin-bottom: 20px; /* Espaciado inferior */
 }
+
+
+
+.pedido {
+  width: 300px;      
+  height: auto;       
+  border-radius: 15px; 
+  object-fit: cover; 
+  box-shadow: 0 4px 8px rgba(23, 184, 44, 0.2);   
+}
+
+.pedido h4{
+  font-size: 20px;
+  color: #5d5d5e;
+  padding: 15px;
+} 
+
+/*Estilos Sección CRUD*/
+  .filtro-fechas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .filtro-fechas button {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    background-color: #6366f1;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }

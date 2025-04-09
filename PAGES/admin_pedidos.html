@@ -4,7 +4,7 @@
     <!-- Metadatos básicos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administración pedidos</title>
+    <title>Pedidos</title>
     
     <!-- Enlace a la hoja de estilos personalizada -->
     <link rel="stylesheet" href="../CSS/style.css">
@@ -35,16 +35,15 @@
                 <li class="nav-item"><a href="gestion_menu.html" class="nav-link fw-bold">Gestión del Menú</a></li>
                 <li class="nav-item"><a href="admin_pedidos.html" class="nav-link">Administración de Pedidos</a></li>
                 <li class="nav-item"><a href="menu.html" class="nav-link">Menú</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Configuración</a></li>
             </ul>
         </div>
         
-        <!-- Contenido principal del menú -->
+        <!-- Contenido principal Pedidos -->
         <div class="container-fluid">
 
             <!-- Encabezado del administrador -->
             <div class="admin-header d-flex justify-content-between align-items-center p-3 text-white">
-                <span class="fw-bold">ADMINISTRACIÓN PEDIDOS</span>
+                <span class="fw-bold">ADMINISTRAR PEDIDOS</span>
                 <div class="text-end">
                     <p class="mb-0 fw-bold">Administrador Delicious</p>
                     <p class="mb-0 text-muted">admin@delicious.com</p>
@@ -53,9 +52,52 @@
 
             <br>
             
+            <!-- Sección de Administración de pedidos -->
+            <div class="menu-section">
+                <h2 class="fw-bold">ADMINISTRACIÓN DE PEDIDOS / RESERVAS</h2>
+                <br>
+               
+                <!-- Elementos de la sección de pedidos -->
+                <div class="pedido">
+                    <h4>REGISTRO DE PEDIDOS</h4>
+                    <br>
+                    <img src="../images/Pedidos.png">
+                </div>
+                <div class="d-flex justify-content-center gap-3 my-4">
+                    <button type="button" class="btn btn-secondary fw-bold"> Agregar</button>
+                    <button type="button" class="btn btn-secondary fw-bold">Modificar</button>
+                    <button type="button" class="btn btn-secondary fw-bold">Eliminar</button>
+                </div>
+                <br>
+                <div class="pedido">
+                    <h4>RESERVAS</h4>
+                    <br>
+                    <img src="../images/Reservas.png">
+                </div>
+                <div class="d-flex justify-content-center gap-3 my-4">
+                    <button type="button" class="btn btn-secondary fw-bold"> Agregar</button>
+                    <button type="button" class="btn btn-secondary fw-bold">Modificar</button>
+                    <button type="button" class="btn btn-secondary fw-bold">Eliminar</button>
+                </div>
+                <br>
+                <div class="pedido">
+                    <h4>MODIFICAR CARACTERISTICAS</h4>
+                    <br>
+                    <img src="../images/pie-chart.png">
+                </div>
+                <br>
+                <div class="filtro-fechas">
+                    <button>Últimos 7 días</button>
+                    <button>Últimos 30 días</button>
+                    <button>Últimos 90 días</button>
+                </div>
+                <div class="pedido">
+                    <img src="../images/Barra_Final.png">
+                </div>
+            </div>
         </div>
     </div>
-
+   
     <!-- Pie de página -->
     <footer class="bg-dark text-white text-center py-3 mt-5">
         <p>&copy; 2025 Delicious Restaurante | Contacto: info@delicious.com | Tel: +123 456 7890</p>
