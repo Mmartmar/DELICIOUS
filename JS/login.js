@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Redirige al usuario al panel de gestión después de 1 segundo
             setTimeout(() => {
                 window.location.href = "gestion_menu.html";
-            }, 5000);
+            }, 1000);
         } else {
             // Muestra un mensaje de error si las credenciales son incorrectas
             Swal.fire({
