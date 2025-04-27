@@ -7,7 +7,7 @@
 
 /* Estilos para la sección hero (encabezado principal) */
 .hero {
-    background: url('/IMAGES/hero-image.jpg') center/cover no-repeat; /* Imagen de fondo */
+    background: url('IMAGES/hero-image.jpg') center/cover no-repeat; /* Imagen de fondo */
     height: 50vh; /* Altura de la sección */
     position: relative;
     display: flex;
@@ -79,7 +79,7 @@
     width: 400px; /* Ancho de la barra lateral */
     min-height: 100vh; /* Altura mínima igual a la ventana */
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), 
-                url('/IMAGES/hero-image.jpg'); /* Fondo con degradado e imagen */
+                url('IMAGES/hero-image.jpg'); /* Fondo con degradado e imagen */
     background-size: cover;
     background-position: center;
     padding: 20px;
