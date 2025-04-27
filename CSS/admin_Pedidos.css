@@ -1,0 +1,104 @@
+.tablero-seccion {
+    background-color: rgba(240, 240, 240, 0.9); /* gris claro con transparencia */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    height: 250px;
+    overflow-y: auto;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Efecto de color al pasar el mouse */
+  .tablero-seccion:hover {
+    background-color: rgba(180, 100, 60, 0.5); /* Color translúcido */
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+  
+  .boton-accion {
+    background-color: #d3d3d3; /* gris claro */
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .boton-accion i {
+    font-size: 1rem;
+  }
+  
+  .boton-accion:hover {
+    background-color: rgba(180, 100, 60, 0.5); 
+    color: #000;
+    transform: scale(1.05);
+  }
+  .boton-tabla {
+    background-color: #d3d3d3; /* gris claro */
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .boton-tabla:hover {
+    background-color: rgba(180, 100, 60, 0.5); 
+  }
+  
+  .contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #4caf91;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+  
+  button:hover {
+    background-color: #3b8e75;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .oculto {
+    display: none;
+  }
+  
+  .oculto {
+    display: none;
+}
+.mesa-disponible:hover {
+    background-color: #d1f0d1;
+}
